@@ -8,6 +8,9 @@ finish-args:
   - '--socket=fallback-x11'
   - '--socket=wayland'
   - '--filesystem=/run/docker.sock'
+  - '--filesystem=xdg-run/docker.sock'
+  - '--filesystem=/run/podman/podman.sock'
+  - '--filesystem=xdg-run/podman/podman.sock'
 modules:
   - name: granite
     buildsystem: meson
@@ -50,5 +53,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/sdv43/whaler.git
-        tag: 1.1.0
-        commit: 383b3cca1802cb2e6c095e4a11fd126733ac8162
+        tag: 1.2.0
+        commit: 6a72b3cff9df1532c5ecd1260f0e399e8facefd9
