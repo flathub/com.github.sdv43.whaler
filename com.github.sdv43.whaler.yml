@@ -53,5 +53,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/sdv43/whaler.git
-        tag: 1.2.0
-        commit: 6a72b3cff9df1532c5ecd1260f0e399e8facefd9
+        tag: 1.2.1
+        commit: 133ac20614ed835ebe7bea73d895dc70df71b99e
