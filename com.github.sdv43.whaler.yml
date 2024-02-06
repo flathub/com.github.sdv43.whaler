@@ -1,6 +1,6 @@
 app-id: com.github.sdv43.whaler
 runtime: org.gnome.Platform
-runtime-version: '44'
+runtime-version: '45'
 sdk: org.gnome.Sdk
 command: com.github.sdv43.whaler
 finish-args:
@@ -48,10 +48,26 @@ modules:
                 dest-filename: autogen.sh
                 commands:
                   - autoreconf -si
+  - name: elementary-icons
+    buildsystem: meson
+    config-opts:
+      - '-Dpalettes=false'
+    sources:
+      - type: git
+        url: https://github.com/elementary/icons.git
+        tag: 6.1.0
+    modules:
+      - name: xcursorgen
+        cleanup:
+          - '*'
+        sources:
+          - type: archive
+            url: https://gitlab.freedesktop.org/xorg/app/xcursorgen/-/archive/xcursorgen-1.0.7/xcursorgen-xcursorgen-1.0.7.tar.gz
+            sha256: 7fb30a052b63e3ed02c9e43bd70fe1bf8189f2f3d702ab43b5b0726a2dbafccd
   - name: whaler
     buildsystem: meson
     sources:
       - type: git
         url: https://github.com/sdv43/whaler.git
-        tag: 1.2.1
-        commit: 133ac20614ed835ebe7bea73d895dc70df71b99e
+        tag: 1.2.2
+        commit: e83f65b02fcf7c08879e7db03188774a963ca024
