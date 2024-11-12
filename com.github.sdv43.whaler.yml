@@ -1,6 +1,6 @@
 app-id: com.github.sdv43.whaler
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '46'
 sdk: org.gnome.Sdk
 command: com.github.sdv43.whaler
 finish-args:
@@ -69,5 +69,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/sdv43/whaler.git
-        tag: 1.2.2
-        commit: e83f65b02fcf7c08879e7db03188774a963ca024
+        tag: 1.2.3
+        commit: 53025656a93012be53d48779d5364c82b9524112
