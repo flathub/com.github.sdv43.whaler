@@ -1,6 +1,6 @@
 app-id: com.github.sdv43.whaler
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: com.github.sdv43.whaler
 finish-args:
@@ -11,6 +11,13 @@ finish-args:
   - '--filesystem=xdg-run/docker.sock'
   - '--filesystem=/run/podman/podman.sock'
   - '--filesystem=xdg-run/podman/podman.sock'
+cleanup:
+  - /bin/granite-demo
+  - /include
+  - /lib/girepository-1.0
+  - /lib/pkgconfig
+  - /share/gir-1.0
+  - /share/vala
 modules:
   - name: granite
     buildsystem: meson
